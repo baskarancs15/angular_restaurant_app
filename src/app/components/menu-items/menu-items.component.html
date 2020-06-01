@@ -1,3 +1,42 @@
-<p>
-  menu-items works!
-</p>
+<div>
+  <label>Food Item</label>
+  <select
+    class="custom-select custom-select-sm"
+    (change)="selectMenuitem($event)"
+  >
+    <option selected>select</option>
+    <option [value]="i" *ngFor="let menuitem of menuitems; let i = index">{{
+      menuitem.name
+    }}</option>
+  </select>
+  <div class="row">
+    <div class="col">
+      <label>Price</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="price"
+        placeholder="Price"
+      />
+    </div>
+    <div class="col">
+      <label>Quantity</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="quantity"
+        placeholder="Quantity"
+        (ngModelChange)="valuechange($event)"
+      />
+    </div>
+  </div>
+  <div>
+    <label>Grand Total</label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="grandTotal"
+      placeholder="Grand Total"
+    />
+  </div>
+</div>

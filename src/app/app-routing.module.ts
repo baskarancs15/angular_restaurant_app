@@ -1,17 +1,17 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { MenuItemsComponent } from "../app/components/menu-items/menu-items.component";
+// import { MenuItemsComponent } from "../app/components/menu-items/menu-items.component";
 import { DashboardComponent } from "../app/components/dashboard/dashboard.component";
 
 const routes: Routes = [
   {
     path: "dashboard",
     component: DashboardComponent
-  },
-  {
-    path: "",
-    component: MenuItemsComponent
   }
+  // {
+  //   path: "",
+  //   component: MenuItemsComponent
+  // }
 ];
 
 @NgModule({
